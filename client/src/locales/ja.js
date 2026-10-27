@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -106,6 +107,18 @@ export default {
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
+    submittedOrders: {
+      title: '送信済み発注',
+      empty: '送信済みの補充発注はまだありません。',
+      orderNumber: '注文番号',
+      items: '品目',
+      totalCost: '合計費用',
+      submittedDate: '送信日',
+      leadTime: 'リードタイム',
+      expectedDelivery: '納品予定日',
+      status: 'ステータス',
+      days: '{count}日'
+    },
     totalOrders: '総注文数',
     totalRevenue: '総収益',
     avgOrderValue: '平均注文額',
@@ -198,8 +211,41 @@ export default {
     allMonths: 'すべての月'
   },
 
+  restocking: {
+    title: '補充発注',
+    description: '予算内で総数量を最大化する推奨補充数量',
+    budget: '予算',
+    budgetLabel: '補充予算',
+    itemsSelected: '選択品目数',
+    totalUnits: '合計数量',
+    totalCost: '合計費用',
+    remainingBudget: '残り予算',
+    recommendations: '推奨品目',
+    empty: '現在の予算に収まる品目はありません。予算を増やしてください。',
+    table: {
+      sku: 'SKU',
+      item: '品目',
+      trend: 'トレンド',
+      quantity: '数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      leadTime: 'リードタイム'
+    },
+    days: '{count}日',
+    placeOrder: '発注する',
+    submitting: '送信中...',
+    orderPlaced: '発注が完了しました',
+    orderNumber: '注文番号',
+    total: '合計',
+    expectedDelivery: '納品予定日',
+    viewOrders: '注文を表示',
+    submitError: '発注に失敗しました: ',
+    loadError: '推奨の読み込みに失敗しました: '
+  },
+
   // Statuses
   status: {
+    submitted: '送信済み',
     delivered: '配達済み',
     shipped: '出荷済み',
     processing: '処理中',
@@ -309,6 +355,36 @@ export default {
     english: 'English',
     japanese: '日本語',
     selectLanguage: '言語を選択'
+  },
+
+  // Purchase Orders
+  purchaseOrder: {
+    createButton: '発注書を作成',
+    viewButton: '発注書を表示',
+    createTitle: '発注書の作成',
+    viewTitle: '発注書の詳細',
+    sku: 'SKU',
+    shortage: '不足数',
+    units: '個',
+    supplier: '仕入先名',
+    quantity: '数量',
+    unitCost: '単価 (USD)',
+    totalCost: '合計金額 (USD)',
+    expectedDelivery: '納品予定日',
+    notes: '備考 (任意)',
+    noNotes: 'なし',
+    poNumber: '発注書番号',
+    status: 'ステータス',
+    createdDate: '作成日',
+    notAvailable: 'なし',
+    submit: '発注書を作成',
+    saving: '保存中...',
+    errSupplier: '仕入先名は必須です。',
+    errQuantity: '数量は正の整数で入力してください。',
+    errUnitCost: '単価は0以上で入力してください。',
+    errDate: '有効な納品予定日を選択してください。',
+    createFailed: '発注書の作成に失敗しました。',
+    loadFailed: '発注書の読み込みに失敗しました。'
   },
 
   // Common
